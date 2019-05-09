@@ -1,0 +1,33 @@
+body{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  color: white;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+}
+
+body canvas{
+  margin: auto;
+}
+
+body input{
+  display: inline;
+  width: 100px;
+}
+
+body input[type="text"]{
+  display: inline;
+  width: 200px;
+  margin-left: 42.5%;
+}
+
+
+button{
+  background-color: black;
+  color: white;
+}
