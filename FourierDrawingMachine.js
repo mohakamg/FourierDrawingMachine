@@ -14,7 +14,7 @@ let signalVector = [], path = [], cnv;
 
 // Smoothing Filter
 // const movingFilter = [1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9];
-const movingFilter = [1, 1, 1];
+const movingFilter = [1/2, 1/2];
 
 // Fourier and signal
 let signalx = [], signaly = [], fourierSignalX = [], fourierSignalY = [];
@@ -131,6 +131,7 @@ function recordShape(){
 
     drawingVector.push(createVector(pointx, pointy));
 
+    // drawingx = beta*drawingx[drawingx.length - 1] + (1 - beta)*
     drawingx = conv(drawingx, movingFilter);
     drawingy = conv(drawingy, movingFilter);
 
